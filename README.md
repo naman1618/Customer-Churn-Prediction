@@ -81,4 +81,34 @@ The final XGBoost model was deployed using Flask, providing a REST API endpoint 
 1. **API Development**: Created a Flask app (`app.py`) with a `/predict` endpoint to accept customer data and return churn predictions.
 2. **Model Serialization**: Saved the trained model using `joblib` for easy loading in the Flask application.
 
+## Project Structure
+
+The project is organized as follows:
+
+Customer-Churn-Prediction/ │ ├── Data-understanding-preprocessing.ipynb # Jupyter Notebook containing data exploration, preprocessing, and model training steps ├── model_training.py # Python script for training and evaluating machine learning models ├── app.py # Flask API script for model deployment ├── requirements.txt # File listing the Python dependencies required for the project ├── README.md # Project documentation (this file) ├── LICENSE # License for the project └── images/ # Folder containing images and visualizations used in the project report
+
+
+### Main Components
+- **`Data-understanding-preprocessing.ipynb`**: This Jupyter Notebook includes data loading, data exploration (EDA), feature engineering, and the initial model training process. It provides detailed insights into the data and demonstrates the steps taken to build predictive models.
+  
+- **`model_training.py`**: This script contains the code for training various machine learning models and performing hyperparameter tuning. The models include Logistic Regression, Random Forest, and XGBoost, and the script evaluates each model's performance using metrics like accuracy, precision, recall, F1 score, and ROC-AUC.
+
+- **`app.py`**: The Flask application that serves the trained machine learning model as a RESTful API. This API allows for real-time predictions by sending HTTP POST requests with customer data.
+
+- **`requirements.txt`**: Lists all the libraries and dependencies required to run the project, ensuring that the environment can be easily recreated.
+
+- **`README.md`**: The comprehensive project documentation that explains each phase of the project, from data exploration to model deployment.
+
+- **`images/`**: Contains all visualizations generated during the exploratory data analysis and any images used to explain the project in the README or other documentation.
+
+## Getting Started
+
+### Prerequisites
+To run this project, you will need:
+- **Python 3.8+** installed on your system
+- Install the required libraries using:
+  ```bash
+  pip install -r requirements.txt
+
+
 
